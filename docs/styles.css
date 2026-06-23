@@ -349,31 +349,16 @@ img { max-width: 100%; }
 }
 
 /* ---- Subscribe form (reproduced from DS SubscribeForm) ---- */
-.ms-subscribe { display: flex; gap: 8px; flex-wrap: wrap; }
-.ms-subscribe input {
-  font-family: var(--font-sans); font-size: 14.5px; padding: 11px 15px;
-  border: 1.5px solid var(--ink); border-radius: 999px; background: var(--white);
-  color: var(--ink); min-width: 240px; outline: none;
-}
-.ms-subscribe button {
+.ms-subscribe-btn {
   font-family: var(--font-sans); font-weight: 600; letter-spacing: .01em;
   border-radius: 999px; border: 1.5px solid var(--ink); cursor: pointer;
   display: inline-flex; align-items: center; gap: 8px; font-size: 14px;
-  padding: 11px 20px; white-space: nowrap; background: var(--brand-yellow);
-  color: var(--ink); box-shadow: 5px 5px 0 var(--ink);
+  padding: 11px 24px; white-space: nowrap; background: var(--brand-yellow);
+  color: var(--ink); box-shadow: 5px 5px 0 var(--ink); text-decoration: none;
   transition: transform 120ms cubic-bezier(.2,.6,.2,1), background 200ms cubic-bezier(.2,.6,.2,1), box-shadow 120ms cubic-bezier(.2,.6,.2,1);
 }
-.ms-subscribe button:hover { background: var(--brand-yellow-deep); }
-.ms-subscribe button:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--ink); }
-.ms-subscribe-done {
-  display: flex; align-items: center; gap: 10px; color: var(--brand-yellow);
-  font-family: var(--font-sans); font-weight: 600; font-size: 15px;
-}
-.ms-subscribe-done .check {
-  display: inline-flex; width: 26px; height: 26px; border-radius: 50%;
-  background: var(--brand-yellow); color: var(--ink);
-  align-items: center; justify-content: center; font-weight: 800; flex: none;
-}
+.ms-subscribe-btn:hover { background: var(--brand-yellow-deep); }
+.ms-subscribe-btn:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--ink); }
 
 /* ============================================================
    CONTACT

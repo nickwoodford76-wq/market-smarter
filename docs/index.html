@@ -340,10 +340,7 @@
         <h2>Practical AI for marketers. No hype, no jargon.</h2>
         <p class="ms-newsletter-lede">Every week I share one AI workflow that actually saves time on Monday morning, written in plain English for people in marketing and comms. Free forever.</p>
         <div style="display:inline-block;">
-          <form class="ms-subscribe" id="subscribe-form" novalidate>
-            <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
-            <button type="submit">Subscribe</button>
-          </form>
+          <a class="ms-subscribe-btn" href="https://marketsmarterwithai.substack.com/" target="_blank" rel="noopener">Subscribe</a>
         </div>
         <div style="margin-top:22px;">
           <a class="ms-newsletter-link" href="https://marketsmarterwithai.substack.com" target="_blank" rel="noopener">&rarr; marketsmarterwithai.substack.com</a>
@@ -424,22 +421,6 @@
 <script>
   // Current year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Subscribe form — mirrors the design system's SubscribeForm:
-  // a valid-looking email shows the success state.
-  (function () {
-    var form = document.getElementById('subscribe-form');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = form.querySelector('input[type=email]').value.trim();
-      if (email.indexOf('@') === -1) { form.reportValidity && form.reportValidity(); return; }
-      var done = document.createElement('div');
-      done.className = 'ms-subscribe-done';
-      done.innerHTML = '<span class="check">&#10003;</span>You’re in. The next issue lands Monday.';
-      form.replaceWith(done);
-    });
-  })();
 </script>
 
 </body>
