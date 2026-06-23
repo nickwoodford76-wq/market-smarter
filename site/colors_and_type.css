@@ -1,0 +1,255 @@
+/* ============================================================
+   MARKET SMARTER WITH AI — Colors & Type
+   Practical AI newsletter for marketers. By Nick Woodford.
+   ------------------------------------------------------------
+   Brand registers:
+   1. NEWSLETTER (web)   bold golden-yellow + ink black,
+                         grayscale halftone illustration, serif reading.
+   2. FIELD GUIDE (print/lead-magnet) editorial: serif display,
+                         letterspaced caps, cream paper, single yellow accent.
+   ------------------------------------------------------------
+   BRAND FONTS (taken from Nick's logo):
+   · Playfair Display  — the "Ms" monogram + display headlines.
+   · Montserrat        — the "Market Smarter" wordmark + taglines, UI.
+   Newsreader is the dedicated long-form reading face (pairs with
+   Playfair; swap to Montserrat if you ever want an all-sans body).
+   All loaded from the Google Fonts CDN.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Montserrat:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---- BRAND COLOR ---------------------------------------- */
+  --brand-yellow:      #FBC101;  /* signature golden amber */
+  --brand-yellow-deep: #E3AD00;  /* hover / pressed yellow */
+  --brand-yellow-soft: #FFE9A3;  /* tints, highlights, washes */
+  --brand-yellow-wash: #FFF6DC;  /* faint background tint */
+
+  /* ---- INK & NEUTRALS (warm grayscale, halftone vibe) ----- */
+  --ink:        #0A0A08;  /* near-black, warm — primary text & illustration */
+  --ink-soft:   #2A2A26;  /* secondary heading ink */
+  --gray-700:   #44443E;  /* body on cream */
+  --gray-500:   #76766E;  /* muted / captions */
+  --gray-400:   #9A9A92;  /* halftone mid */
+  --gray-300:   #C4C4BC;  /* hairline-strong / halftone light */
+  --gray-200:   #E2E0D8;  /* borders, rules */
+  --gray-100:   #EFEDE4;  /* subtle fills */
+
+  /* ---- SURFACES ------------------------------------------- */
+  --paper:      #FAF7F0;  /* warm cream — editorial / field-guide mode */
+  --paper-2:    #F3EFE4;  /* deeper cream panel */
+  --white:      #FFFFFF;  /* web reading surface */
+  --surface-ink:#121210;  /* dark mode / inked panels */
+
+  /* ---- SEMANTIC ------------------------------------------- */
+  --fg-1:       var(--ink);        /* primary text */
+  --fg-2:       var(--gray-700);   /* body */
+  --fg-3:       var(--gray-500);   /* muted, meta */
+  --fg-on-yellow: var(--ink);      /* text sat on yellow */
+  --bg-1:       var(--white);
+  --bg-2:       var(--paper);
+  --accent:     var(--brand-yellow);
+  --accent-ink: var(--ink);        /* accent paired w/ ink for contrast */
+  --border:     var(--gray-200);
+  --border-ink: var(--ink);        /* bold editorial rules */
+  --link:       var(--ink);        /* links = ink + yellow underline */
+  --link-underline: var(--brand-yellow);
+
+  /* ---- TYPE FAMILIES -------------------------------------- */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif; /* LOGO monogram + display headlines + numerals */
+  --font-sans:  'Montserrat', 'Helvetica Neue', Arial, sans-serif;        /* LOGO wordmark + taglines, labels, UI, eyebrows */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;         /* long-form reading body + standfirst */
+  --font-mono:  'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;     /* prompts, tags, mono labels */
+
+  /* ---- TYPE SCALE (fluid-ish, px base) -------------------- */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 18px;   /* reading body */
+  --text-md:   20px;
+  --text-lg:   24px;
+  --text-xl:   30px;
+  --text-2xl:  38px;
+  --text-3xl:  50px;
+  --text-4xl:  66px;
+  --text-5xl:  88px;   /* field-guide hero */
+
+  /* ---- RADII (restrained — editorial, not bubbly) --------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  /* ---- BORDERS -------------------------------------------- */
+  --hairline: 1px solid var(--border);
+  --rule-ink: 1.5px solid var(--ink);
+  --rule-bold: 3px solid var(--ink);
+
+  /* ---- SHADOWS (soft, paper-like; used sparingly) --------- */
+  --shadow-sm: 0 1px 2px rgba(10,10,8,.06), 0 1px 1px rgba(10,10,8,.04);
+  --shadow-md: 0 4px 14px rgba(10,10,8,.08), 0 1px 3px rgba(10,10,8,.06);
+  --shadow-lg: 0 14px 40px rgba(10,10,8,.12), 0 4px 10px rgba(10,10,8,.06);
+  --shadow-yellow: 6px 6px 0 var(--brand-yellow);   /* editorial offset block */
+  --shadow-ink: 5px 5px 0 var(--ink);               /* hard offset card */
+
+  /* ---- SPACING (8pt base) --------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ---- MOTION --------------------------------------------- */
+  --ease: cubic-bezier(.2,.6,.2,1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur: 200ms; /* @kind other */
+  --dur-slow: 360ms; /* @kind other */
+}
+
+/* ============================================================
+   SEMANTIC TYPE ROLES
+   ============================================================ */
+
+/* Eyebrow / kicker — letterspaced caps. The field-guide signature. */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+/* Mono micro-label — VOL. 01 · NO. 04 · MMXXVI · tags */
+.label-mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--text-xs);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+/* Display — field-guide hero ("A field guide, not a manifesto.") — Playfair, like the logo */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-4xl);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-3xl);
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  letter-spacing: -0.014em;
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+
+.h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+}
+
+/* Section header inside articles (Nick's newsletters) */
+.h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--fg-1);
+}
+
+/* Standfirst / subtitle / deck */
+.subtitle {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--text-md);
+  line-height: 1.4;
+  color: var(--fg-3);
+  text-wrap: pretty;
+}
+
+/* Reading body — newsletter prose */
+.body, .prose p {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: 1.62;
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+
+/* UI / functional copy */
+.ui {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--fg-2);
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--fg-3);
+}
+
+/* Prompt / code block — mono, inked panel */
+.prompt {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* Drop-letter / numeral — the "NO. 01" big figure — Playfair, high-contrast */
+.numeral {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-4xl);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-variant-numeric: lining-nums;
+}
+
+/* Link convention: ink text, yellow underline */
+.link {
+  color: var(--link);
+  text-decoration: none;
+  background-image: linear-gradient(var(--link-underline), var(--link-underline));
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size var(--dur) var(--ease);
+}
+.link:hover { background-size: 100% 100%; color: var(--ink); }
