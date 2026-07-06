@@ -20,8 +20,10 @@
   @media (prefers-reduced-motion: reduce){*{animation:none !important;scroll-behavior:auto !important;}}
   @media (max-width: 880px){
     .ms-nav-toggle{display:inline-flex !important;}
-    .ms-nav-links{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column !important;align-items:stretch !important;gap:6px !important;background:var(--white);border-bottom:1px solid var(--border);padding:14px 28px 20px !important;box-shadow:0 16px 24px -16px rgba(0,0,0,0.35);}
+    .ms-nav-links{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column !important;align-items:stretch !important;gap:0 !important;background:var(--white);border-bottom:1px solid var(--border);padding:14px 28px 20px !important;box-shadow:0 16px 24px -16px rgba(0,0,0,0.35);}
     header.ms-open .ms-nav-links{display:flex !important;}
+    .ms-nav-links a{padding:13px 8px !important;font-size:15.5px !important;border-bottom:1px solid var(--border);}
+ 
     .ms-grid-2{grid-template-columns:1fr !important;}
     .ms-grid-2-svc{grid-template-columns:1fr !important;}
     .ms-hero-media{min-height:300px !important;}
