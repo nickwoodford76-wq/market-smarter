@@ -16,6 +16,8 @@
   ::selection{background:var(--brand-yellow);color:var(--ink);}
   img{max-width:100%;}
   .ms-nav-toggle{display:none;}
+  .ms-inc-card{transition:transform 200ms cubic-bezier(.2,.6,.2,1),box-shadow 200ms;}
+  .ms-inc-card:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--ink);}
   a{color:var(--ink);}
   a:hover{color:var(--ink-soft);}
   @media (prefers-reduced-motion: reduce){*{animation:none !important;scroll-behavior:auto !important;}}
@@ -27,6 +29,7 @@
     .ms-why{grid-template-columns:1fr !important;}
     .ms-obj{grid-template-columns:1fr !important;}
     .ms-weeks{grid-template-columns:1fr !important;}
+    .ms-included{grid-template-columns:1fr !important;}
     .ms-display{font-size:44px !important;}
     .ms-section{padding:60px 0 !important;}
   }
@@ -195,6 +198,22 @@
     <div style="margin-top:34px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:22px 26px;background:var(--brand-yellow-wash);border:1.5px solid var(--ink);">
       <span style="font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--ink);">No coding. No becoming an &ldquo;AI expert.&rdquo;</span>
       <span style="font-family:var(--font-serif);font-size:17px;color:var(--gray-700);">Just a handful of workflows you&rsquo;ll actually use, taught live, week by week.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT'S INCLUDED ===================== -->
+<section id="included" style="scroll-margin-top:70px;background:var(--white);border-bottom:2px solid var(--ink);">
+  <div class="ms-wrap" style="max-width:1080px;margin:0 auto;padding:84px 28px;">
+    <div class="eyebrow" style="margin-bottom:16px;">What&rsquo;s included</div>
+    <h2 class="h1" style="font-size:44px;margin:0 0 14px;">Everything you get.</h2>
+    <p class="body" style="font-size:18px;color:var(--gray-700);max-width:620px;margin:0 0 40px;">Six weeks of live teaching &mdash; plus the recordings, one-to-one time, community and templates to make it all stick.</p>
+    <div class="ms-included" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+      <div class="ms-inc-card" style="background:var(--white);border:1.5px solid var(--ink);padding:26px 28px;display:flex;gap:16px;align-items:flex-start;"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand-yellow);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--ink);font-size:15px;">&#10003;</span><div><div style="font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:5px;">6 live 1-hour sessions</div><div class="body" style="font-size:15px;color:var(--gray-700);">Six weekly sessions taught live, built to fit around a working week.</div></div></div>
+      <div class="ms-inc-card" style="background:var(--white);border:1.5px solid var(--ink);padding:26px 28px;display:flex;gap:16px;align-items:flex-start;"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand-yellow);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--ink);font-size:15px;">&#10003;</span><div><div style="font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:5px;">Session recordings</div><div class="body" style="font-size:15px;color:var(--gray-700);">Can&rsquo;t make one live? Watch every session back whenever suits you.</div></div></div>
+      <div class="ms-inc-card" style="background:var(--white);border:1.5px solid var(--ink);padding:26px 28px;display:flex;gap:16px;align-items:flex-start;"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand-yellow);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--ink);font-size:15px;">&#10003;</span><div><div style="font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:5px;">A 1:1 session</div><div class="body" style="font-size:15px;color:var(--gray-700);">Personal time with me to work through your own goals and questions.</div></div></div>
+      <div class="ms-inc-card" style="background:var(--white);border:1.5px solid var(--ink);padding:26px 28px;display:flex;gap:16px;align-items:flex-start;"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand-yellow);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--ink);font-size:15px;">&#10003;</span><div><div style="font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:5px;">Community chat group</div><div class="body" style="font-size:15px;color:var(--gray-700);">A space to share prompts, ask questions and keep the momentum going.</div></div></div>
+      <div class="ms-inc-card" style="grid-column:1/-1;background:var(--white);border:1.5px solid var(--ink);padding:26px 28px;display:flex;gap:16px;align-items:flex-start;"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand-yellow);border:1.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--ink);font-size:15px;">&#10003;</span><div><div style="font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:5px;">Templates &amp; prompts to keep</div><div class="body" style="font-size:15px;color:var(--gray-700);">Ready-made templates and prompts you&rsquo;ll take away and reuse.</div></div></div>
     </div>
   </div>
 </section>
